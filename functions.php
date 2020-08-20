@@ -2,8 +2,8 @@
     //Necessary information to connect to MySQL
     $dbhost = 'localhost';
     $dbname = 'socialnetwork';
-    $dbuser = 'tester1';
-    $dbpass = 'test123';
+    $dbuser = ''; //Fill in your Username and Password to access your MySQL server
+    $dbpass = '';
     
     /* Establish a connection to MySQL server using the credentials above */
     $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
