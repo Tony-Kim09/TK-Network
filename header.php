@@ -44,7 +44,6 @@
     //Create a navigation bar if User is logged in
         if ($loggedin){
             echo <<<_LOGGEDIN
-                <div class='center'>
                     <div class='center'>
                         <a data-role='button' data-inline='true' data-icon='home'
                           data-transition="slide" href='members.php?view=$user'>Home</a>
