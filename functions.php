@@ -37,6 +37,7 @@
     function destroySession(){
         $_SESSION = array();
         
+        //This will only destroy session that exists within 30days. Adjust accordingly to meet requirements
         if (session_id() != "" || isset($_COOKIE[session_name()])){
             setcookie(session_name(), '', time()-2592000, '/');
         }
