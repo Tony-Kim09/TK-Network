@@ -28,7 +28,7 @@
         global $connection;
         $result = $connection->query($query);
         if(!$result) {
-            die("Something went wrong on our side! Error Code: 9921");
+            die("Something went wrong on our side! Error Code: 500");
         }
         return $result;
     }
