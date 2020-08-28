@@ -45,7 +45,7 @@
         $following[$j] = $row['user'];
     }
     
-    //If both user and members aree following each other, store in mutual array    
+    //If both user and members are following each other, store in mutual array    
     $mutual = array_intersect($followers, $following);
     //Store rest in their respective arrays
     $followers = array_diff($followers, $mutual);
