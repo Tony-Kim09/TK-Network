@@ -1,7 +1,7 @@
 <?php
     //Necessary information to connect to MySQL
     $dbhost = 'localhost';
-    $dbname = '';
+    $dbname = ''; //Create a database with a name of your choice
     $dbuser = ''; //Fill in your Username and Password to access your MySQL server
     $dbpass = '';
     
