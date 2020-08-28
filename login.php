@@ -1,39 +1,41 @@
 <?php
-    require_once 'header.php';
-    $error = $user = $pass = "";
-    
-    if(isset($_POST['user'])){
-        //Sanitize User input for security
-        $user = sanitizeString($_POST['user']);
-        
-        //Check for blank username
-        if ($user == ""){
-            $error = 'Please enter your username';
-        } else {
-        
+
+require_once 'header.php';
+$error = $user = $pass = "";
+
+if (isset($_POST['user'])) {
+    //Sanitize User input for security
+    $user = sanitizeString($_POST['user']);
+
+    //Check for blank username
+    if ($user == "") {
+        $error = 'Please enter your username';
+    } else {
+
         //Query MySql to see if Username Exists
-            $result = queryMySQL("SELECT pass FROM members WHERE user = '$user'");
-            
-            if ($result->num_rows == 0) {
-                $error = "Username does not exist";
+        $result = queryMySQL("SELECT pass FROM members WHERE user = '$user'");
+        $hashedPassword = "";
+
+        if ($result->num_rows == 0) {
+            $error = "Username does not exist";
+        } else {
+            $row = $result->fetch_array(MYSQLI_NUM);
+            $hashedPassword = $row[0];
+
+            if (!password_verify($_POST['pass'], $hashedPassword)) {
+                $error = "Incorrect login information";
             } else {
-                 $row = $result->fetch_array(MYSQLI_NUM);
-                 $hashedPassword = $row[0];
-            }
-            
-            if (!password_verify($_POST['pass'], $hashedPassword)){
-                $error = "Incorrect password";
-            } else {
-                
-        //If successfully logged in, redirect to Home Page
+
+                //If successfully logged in, redirect to Home Page
                 $_SESSION['user'] = $user;
                 $_SESSION['pass'] = $hashedPassword;
                 header("Location: members.php?view=$user");
-            }            
+            }
         }
     }
-    
-    echo <<<_END
+}
+
+echo <<<_END
             <form method='post' action='login.php'>
                 <div data-role='fieldcontain'>
                     <label></label>
