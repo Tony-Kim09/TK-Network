@@ -1,7 +1,7 @@
 <?php
     //Necessary information to connect to MySQL
     $dbhost = 'localhost';
-    $dbname = 'socialnetwork';
+    $dbname = '';
     $dbuser = ''; //Fill in your Username and Password to access your MySQL server
     $dbpass = '';
     
