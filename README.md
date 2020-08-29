@@ -2,7 +2,7 @@
 
 ## What I Created
 
-By using everything I learned from Oreily's "Learning PHP, MySQL, JavaScript with JQuery, CSS & HTML5" textbook, and with its help, I created a simple social networking website.
+By using everything I learned from Oreily's "Learning PHP, MySQL, JavaScript with JQuery, CSS & HTML5" textbook, and with its guide, I created a simple social networking website.
 
 ## What I added to the site
 
