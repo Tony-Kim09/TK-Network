@@ -5,8 +5,6 @@
         
     require_once 'header.php';
         
-    $url = isset($_SERVER['PATH_INTO']) ? explode('/', ltrim($_SERVER['PATH_INTO'], '/')) : [];
-
     echo "<div class='center'> Welcome to TK Network,";
     
     if($loggedin){
