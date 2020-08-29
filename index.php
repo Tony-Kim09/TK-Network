@@ -17,7 +17,7 @@
             </div><br>
             </div>
             <div data-role="footer">
-                <h4>Web App from <i><a href='https://github.com/Tony-Kim09/tk-social-media-proj'
+                <h4>Web App from <i><a href='https://github.com/Tony-Kim09/TK-Network'
                 target='_blank'>Check out full project on my GitHub Page </a></i></h4>
             </div>
         </body>
