@@ -19,13 +19,6 @@ By using everything I learned from Oreily's "Learning PHP, MySQL, JavaScript wit
 - Properly and securely storing user messages and description into the database
 - Ensure the program cannot be easily hacked through injection
 
-## What I will improve
-
-- Better design patterns when building websites
-- Use designs such as MVC to seperate code and manage them better
-- Modernize UI and fix design 
-- Instead of leaving messages, create a live chatting system
-
 ## How to test the site yourself
 
 First you need to have MySQL installed in your computer. Then in the functions.php file, fill in the dbuser/dbpass so it can properly access the database.
